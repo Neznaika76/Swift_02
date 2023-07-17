@@ -7,14 +7,25 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
+    
+    @IBOutlet weak var textFieldEmail: UITextField!
+    
+    @IBOutlet weak var textFieldPassword: UITextField!
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        textFieldEmail.delegate = self
+        textFieldPassword.delegate = self
     }
 
-    @IBOutlet weak var lable: UIImageView!
+    @IBAction func buttonSignInTapped(_ sender: Any) {
+    }
+    
     
 }
 
